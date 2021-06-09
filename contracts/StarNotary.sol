@@ -13,7 +13,9 @@ contract StarNotary is ERC721 {
 
     // Implement Task 1 Add a name and symbol properties
     // name: Is a short name to your token
+    string public constant name = "Notary Star";
     // symbol: Is a short string like 'USD' -> 'American Dollar'
+    string public constant symbol = "NST";
     
 
     // mapping the Star with the Owner Address
@@ -57,6 +59,7 @@ contract StarNotary is ERC721 {
     // Implement Task 1 lookUptokenIdToStarInfo
     function lookUptokenIdToStarInfo (uint _tokenId) public view returns (string memory) {
         //1. You should return the Star saved in tokenIdToStarInfo mapping
+        return tokenIdToStarInfo[_tokenId].name;
     }
 
     // Implement Task 1 Exchange Stars function
@@ -72,5 +75,11 @@ contract StarNotary is ERC721 {
         //1. Check if the sender is the ownerOf(_tokenId)
         //2. Use the transferFrom(from, to, tokenId); function to transfer the Star
     }
+
+    interface ERC721Metadata {
+    function name() external view returns (string name);
+    function symbol() external view returns (string symbol);
+    function tokenURI(uint256 tokenId) external view returns (string);
+}
 
 }
