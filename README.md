@@ -33,6 +33,4 @@ ERC-721 Token Symbol
 
 Address: `0xdd76454b7aad91913ad44a147441c6eb56642cbc` 
 
-![](./app/img/Contract.jpeg)
-
-<p align="center"><img src="app/img/Contract.jpeg" align="center" width="350"></p>
+![](https://github.com/GoodFaithParadigm8/crypto-star/blob/main/app/img/Contract.jpg)
